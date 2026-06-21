@@ -27,8 +27,8 @@ function startBackend() {
   const serverPath = path.join(__dirname, 'dist', 'server.cjs');
 
   try {
-    // Spawn server as independent child process to isolate context perfectly
-    serverProcess = spawn(process.execPath || 'node', [serverPath], {
+    // Spawn server as independent Node.js child process to isolate context perfectly
+    serverProcess = spawn('node', [serverPath], {
       env: { ...process.env },
       stdio: 'pipe'
     });
