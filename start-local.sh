@@ -55,9 +55,9 @@ echo -e "${GREEN}[✓] Alfred workstation compilation succeeded!${NC}"
 
 # Step 5: Start the local system
 echo -e "${GREEN}[✓] Workstation live link initialized!${NC}"
-echo -e "${CYAN}[*] Launching Alfred Cyber Server. Access the HUD inside your browser here:${NC}"
-echo -e "${PURPLE}    >>>  http://localhost:3000  <<<${NC}"
+echo -e "${CYAN}[*] Launching Alfred as a STANDALONE NATIVE APP! Your cyber-workstation is booting...${NC}"
+echo -e "${PURPLE}    No web browser is required! Dedicated Electron HUD is opening...${NC}"
 echo -e "${YELLOW}Keep this terminal open to log local automation tasks.${NC}"
 echo -e "${PURPLE}----------------------------------------------------------------${NC}"
 
-$PKG_MANAGER start
+$PKG_MANAGER run electron

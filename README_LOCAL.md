@@ -1,10 +1,10 @@
-# 🖥️ Running Alfred Workstation Locally on Your PC
+# 🖥️ Running Alfred Workstation as a Standalone Local Desktop Application
 
-Alfred is a fully functional React + Node.js (Express) cyber-themed developer workstation. Because it includes a dedicated backend server, running it locally gives you the power to execute automation scripts, read/write local files securely, and connect directly to your local **Ollama** models with zero browser CORS restrictions.
+Alfred has been compiled into a fully integrated standalone native application (built with Electron). Running it locally gives you a dedicated native HUD window that behaves exactly like a local app—no physical web browser or URL typing required! It mounts a background Express Node.js core, runs local automation scripts, and binds directly to your local **Ollama** models with zero CORS restrictions.
 
 ---
 
-## 🚀 Quick Start Guide (Run with 1 Click)
+## 🚀 Quick Start Guide (Load Natively)
 
 ### 1. Export the App Code
 1. Open the **Settings Panel** (Gear icon ⚙️) in your AI Studio Build workspace.
@@ -13,13 +13,13 @@ Alfred is a fully functional React + Node.js (Express) cyber-themed developer wo
 
 ### 2. Verify Your System Prep
 Make sure you have these two light dependencies installed:
-* **Node.js**: (v18 or higher) — [Download here](https://nodejs.org/)
+* **Node.js**: (v18 or higher with npm) — [Download here](https://nodejs.org/)
 * **Python**: (Since you have it installed, you are fully set!)
 
-### 3. Launch Alfred Natively
+### 3. Launch the Alfred Standalone Desktop Application
 
 * **On Windows**:  
-  Double-click the `./start-local.bat` script.
+  Double-click the `./start-local.bat` script. This script automatically builds your assets and launches the standalone Electron Alfred shell window.
   
 * **On macOS & Linux**:  
   Open your terminal in the extracted directory, make the launcher script executable, and run it:
@@ -28,8 +28,7 @@ Make sure you have these two light dependencies installed:
   ./start-local.sh
   ```
 
-Once launched, Alfred will automatically spin up on:  
-👉 **[http://localhost:3000](http://localhost:3000)**
+Once launched, the terminal window will initialize the core server in the background and boot the **Alfred Standalone desktop app window** automatically!
 
 ---
 
@@ -63,16 +62,16 @@ We made the driver file `/workspace/run.py` fully executable. You can run it fro
 
 ## 🦙 Configuring & Connecting Ollama
 
-Alfred is designed to act as your ultimate frontend dashboard for Ollama.
+Alfred acts as a fully native desktop client interface for Ollama.
 
-1. **Boot Ollama**: Open Ollama on your machine (it runs continuously in your background on `http://localhost:11434` by default).
+1. **Boot Ollama**: Open Ollama on your machine (runs continuously in your background on `http://localhost:11434` by default).
 2. **Download Models**: In your terminal, download any model of your choice to your local computer:
    ```bash
    ollama run llama3.2:3b
    # or
    ollama run deepseek-coder:6.7b
    ```
-3. **Select on Alfred HUD**: Open Alfred in your browser at `http://localhost:3000`. In the bottom chat command input area or in the customization sections, Alfred will query your live system, detect your models, and let you select them from the model dropdown switcher!
+3. **Select on Alfred HUD**: In the bottom chat command input area or in the customization sections, Alfred will query your live system, detect your models, and let you select them from the model dropdown switcher!
 4. **Proxy Mechanism**: Because Alfred uses a custom Express Node.js backend relay route, all requests made from the browser are proxied local server-to-server, bypassing any CORS boundaries.
 
 Enjoy your ultimate private cyber developer workstation running directly on your machine!

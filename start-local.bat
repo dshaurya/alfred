@@ -44,10 +44,10 @@ echo [✓] Alfred workstation compilation succeeded!
 
 rem Step 4: Boot local server
 echo [✓] Workstation live link initialized!
-echo [*] Launching Alfred Cyber Server. Access the HUD inside your browser here:
-echo     ===  http://localhost:3000  ===
+echo [*] Launching Alfred as a STANDALONE NATIVE APP! Your cyber-workstation is booting...
+echo     No web browser is required! Dedicated Electron HUD is opening...
 echo Keep this terminal window open to log local automation tasks.
 echo ================================================================
 
-call npm start
+call npm run electron
 pause
