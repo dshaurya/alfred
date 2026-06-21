@@ -1,0 +1,6 @@
+{
+  "name": "Alfred Linux AI Workstation",
+  "description": "Secure cyber-themed Linux assistant workstation. Integrates local Ollama models with automated workspace file creation, custom model properties, private offline-first passcode encryption, and a matrix console terminal interface.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
